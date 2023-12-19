@@ -1,6 +1,6 @@
 import { BsFillTrash3Fill } from "react-icons/bs";
 import { useDispatch } from "react-redux";
-import { deleteContact } from "../../../redux/contactsSlice";
+import { deleteContact } from "./../../../redux/operations";
 import { Name, Number, RemoveButton } from "./ContactItem.styled";
 
 function ContactItem({ contact }) {

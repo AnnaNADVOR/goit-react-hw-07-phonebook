@@ -17,7 +17,7 @@ export const MainTitle = styled.h1 `
 `
 export const SecondaryTitle = styled.h2 `
     text-align: center;
-    margin-top: 20px;    
+    margin-top: 20px;     
 `
 
 export const Titleparth = styled.span `
