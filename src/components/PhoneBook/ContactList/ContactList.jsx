@@ -4,8 +4,6 @@ import { List, Contact } from "./ContactList.styled";
 import { getContacts, getFilter} from "../../../redux/selectors";
 import Notification from "../Notification/Notification";
 
-
-
 function ContactList() {
     const contacts = useSelector(getContacts); 
     const filter = useSelector(getFilter); 

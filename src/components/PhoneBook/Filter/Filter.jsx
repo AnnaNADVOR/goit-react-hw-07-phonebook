@@ -3,14 +3,15 @@ import { Section} from "./Filter.styled";
 import { FormField, Label, Input, InputSection } from "../ContactForm/ContactForm.styled";
 import { useSelector, useDispatch } from 'react-redux';
 import { setFilter } from "../../../redux/filterSlice";
-import { getContacts, getFilter, getIsLoading } from "../../../redux/selectors";
+import { getContacts, getError, getFilter, getIsLoading } from "../../../redux/selectors";
 
 import Notification from "../Notification/Notification";
 
 function ContactSearch() { 
     const contacts = useSelector(getContacts); 
     const filterValue = useSelector(getFilter); 
-    const loader = useSelector(getIsLoading); 
+    const loader = useSelector(getIsLoading);
+    const error = useSelector(getError);
     const dispatch = useDispatch(); 
     const onChange = event => {
         dispatch(setFilter(event.currentTarget.value.trim()));
@@ -28,11 +29,9 @@ function ContactSearch() {
                         </InputSection>               
                     </FormField>
                 </Section>
-                : <>
-                    {
-                        !loader && <Notification message="There is no contacts" />
-                    }
-                </>
+                : <>{
+                    !loader && !error && <Notification message="There is no contacts" />
+                }</>
             } 
         </>      
     )

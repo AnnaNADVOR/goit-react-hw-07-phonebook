@@ -1,4 +1,3 @@
-// import { addContact } from "../../../redux/contactsSlice";
 import { addContact } from "../../../redux/operations";
 import { useDispatch, useSelector } from "react-redux";
 import { Report } from 'notiflix/build/notiflix-report-aio';
@@ -22,7 +21,6 @@ export default function ContactForm() {
         const form = event.target; 
         const name = form.elements.name.value; 
         const number = form.elements.number.value; 
-       
         if (contacts.find(contact => contact.name.toLowerCase() === name.toLowerCase())) {
             Report.info(
                 "Enter a unique name!",
@@ -31,9 +29,7 @@ export default function ContactForm() {
             )
             return;
         }
-        
         dispatch(addContact({ name, number }));
-        
         form.reset();
     }
 

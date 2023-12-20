@@ -24,3 +24,8 @@ export const Titleparth = styled.span `
     color: ${({ theme }) => theme.colors.blue};
     text-transform: uppercase;
 `
+export const Message = styled.p `
+    text-align: center;
+    color: ${({ theme }) => theme.colors.grey};
+    margin-top: 20px; 
+`
