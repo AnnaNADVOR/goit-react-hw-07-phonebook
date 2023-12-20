@@ -1,7 +1,7 @@
 import { useSelector } from "react-redux";
 import ContactItem from "../ContactItem/ContactItem";
 import { List, Contact } from "./ContactList.styled";
-import { getContacts, getFilter, getIsLoading } from "../../../redux/selectors";
+import { getContacts, getFilter} from "../../../redux/selectors";
 import Notification from "../Notification/Notification";
 
 

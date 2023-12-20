@@ -27,13 +27,10 @@ export default function App() {
     <Container>
       <MainTitle>Phone<Titleparth>Book</Titleparth></MainTitle>
       <ContactForm/>
-      <SecondaryTitle>Contacts</SecondaryTitle>
-       
+      <SecondaryTitle>Contacts</SecondaryTitle>       
       <Filter />    
-     {loader && <Loader>Loading contacts</Loader>
-      
-      }
-        <ContactList />
+      {loader && <Loader>Loading contacts</Loader>}
+      <ContactList />
     </Container>
   )
 }

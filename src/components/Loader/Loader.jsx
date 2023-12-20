@@ -9,8 +9,9 @@ function Loader( ) {
             <ThreeDots
                 color='#6495ED'
                 height="50"
-width="50"
-radius="6"/>            
+                width="50"
+                radius="6"
+            />            
         </LoaderContainer>         
     )
 }
