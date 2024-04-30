@@ -9,7 +9,7 @@ function ContactItem({ contact }) {
     return (
         <>
             <Name>{contact.name}:
-                <Number>{contact.number}</Number>
+                <Number>{contact.phone}</Number>
             </Name> 
             <RemoveButton onClick={onDeleteContact} type="button"> 
                 <BsFillTrash3Fill />                
